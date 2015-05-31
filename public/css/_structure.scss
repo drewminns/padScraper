@@ -1,0 +1,68 @@
+body {
+	background:#F6F4F1;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	background: #22909E;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px;
+	h1 {
+		margin-top: 0;
+		font-weight: 300;
+	}
+	.search {
+		display: flex;
+		align-items: center;
+		button.get {
+			background: #F87748;
+			color: white;
+			font-weight: 700;
+			padding: 25px;
+			border: 0;
+			margin-left: 10px;
+			&:hover {
+				background:#F49C67;
+			}
+		}
+		.preload {
+			display: none;
+		}
+	}
+}
+
+section.results {
+	width: 100%;
+	margin-top: 150px;
+	article {
+		margin: 10px;
+		padding: 25px;
+		background: white;
+		display: flex;
+		flex-flow: row wrap;
+		.image {
+			width: 15%;
+			img {
+				max-width: 100%;
+			}
+		}
+		.content {
+			width: 75%;
+			margin-left: 5%;
+			p.title a {
+				color: #333;
+			}
+			p.price {
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+button.get {
+	// background: 
+}
