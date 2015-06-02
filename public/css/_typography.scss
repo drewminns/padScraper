@@ -32,8 +32,8 @@ $base-font-size: 12px;
 
 @include importfont('mission script', 'fonts/mission-script-webfont', 300);
 
-$baseFont: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$titleFont: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$baseFont: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$titleFont: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 
 /* Base Styles
@@ -113,10 +113,11 @@ h6 {
     margin-top: $leading;
     margin-bottom: 0;
     line-height: $leading;
+    font-weight: 700;
 }
 h1 {
-    font-size: 3 * $scale * 1rem;
-    line-height: 3 * $leading;
+    font-size: 2.35 * $scale * 1rem;
+    line-height: 2.35 * $leading;
     // margin-top: 2 * $leading;
 }
 h2 {

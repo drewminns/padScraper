@@ -6,7 +6,7 @@ var express = require('express'),
 
 app.use(morgan('dev'));
 
-app.get('/', listing.home);
+// app.get('/', listing.home);
 app.get('/api', listing.getListings);
 
 app.listen(port);

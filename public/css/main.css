@@ -145,7 +145,7 @@ body {
   font-size: 1em;
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   webkit-font-smoothing: antialiased;
@@ -154,7 +154,7 @@ body {
 /* Setup */
 html {
   /* Change default typefaces here */
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: auto;
@@ -197,14 +197,15 @@ h4,
 h5,
 h6 {
   /* Change heading typefaces here */
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin-top: 1.5rem;
   margin-bottom: 0;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  font-weight: 700; }
 
 h1 {
-  font-size: 4.242rem;
-  line-height: 4.5rem; }
+  font-size: 3.3229rem;
+  line-height: 3.525rem; }
 
 h2 {
   font-size: 3.2522rem;
@@ -235,7 +236,7 @@ th {
   line-height: 24px; }
 
 td:first-child {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 /* Code blocks */
 code {
@@ -250,7 +251,7 @@ code {
   margin-top: 0; }
 
 strong {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -265,7 +266,7 @@ a {
     color: #51c6c6; }
 
 .button, a.redBtn, a.button, a.redBtn {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.333rem;
   line-height: 2.667rem;
   color: #fff;
@@ -396,28 +397,29 @@ body {
 body {
   background: #F6F4F1; }
 
-header {
+header.top {
   position: fixed;
-  width: 100%;
-  background: #22909E;
+  width: 20%;
+  height: 100%;
+  background: #43464F;
   color: white;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  text-transform: uppercase;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 25px; }
-  header h1 {
-    margin-top: 0;
-    font-weight: 300; }
-  header .search {
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 25px;
+  z-index: 9999; }
+  header.top h1 {
+    margin-top: 0; }
+  header.top .search {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -425,25 +427,40 @@ header {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center; }
-    header .search button.get {
+            align-items: center;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    width: 100%;
+    margin-top: 20px; }
+    header.top .search button.get {
       background: #F87748;
       color: white;
       font-weight: 700;
       padding: 25px;
-      border: 0;
-      margin-left: 10px; }
-      header .search button.get:hover {
+      width: 100%;
+      border: 0; }
+      header.top .search button.get:hover {
         background: #F49C67; }
-    header .search .preload {
+    header.top .search .preload {
       display: none; }
 
 section.results {
-  width: 100%;
-  margin-top: 150px; }
+  width: 80%;
+  margin-left: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap; }
+  section.results a {
+    outline: none; }
   section.results article {
     margin: 10px;
-    padding: 25px;
+    width: calc(100% - 20px);
     background: white;
     display: -webkit-box;
     display: -webkit-flex;
@@ -451,15 +468,39 @@ section.results {
     display: flex;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
+            flex-flow: row wrap;
+    position: relative; }
     section.results article .image {
-      width: 15%; }
-      section.results article .image img {
-        max-width: 100%; }
+      width: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
     section.results article .content {
-      width: 75%;
-      margin-left: 5%; }
-      section.results article .content p.title a {
-        color: #333; }
-      section.results article .content p.price {
-        font-weight: 700; }
+      width: calc(100% - 200px); }
+      section.results article .content header {
+        background: #2D4046;
+        padding: 10px 25px 15px;
+        color: white;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        section.results article .content header .priceList {
+          font-size: 36px;
+          line-height: 40px;
+          font-size: 2rem;
+          line-height: 2.22222rem;
+          font-weight: 700; }
+      section.results article .content .info {
+        padding: 25px; }
+        section.results article .content .info p.title {
+          font-weight: 300;
+          color: #333; }

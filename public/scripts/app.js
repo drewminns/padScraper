@@ -15,7 +15,7 @@ pad.find = function() {
       pad.sort(data);
     },
     error: function(x, t, m) {
-      if(t==="timeout") {
+      if(t === "timeout") {
           pad.message.text('Scraper Timeout. Click Again');
           pad.button.show();
           pad.preload.hide();
@@ -51,18 +51,18 @@ pad.sort = function (content) {
 };
 
 pad.display = function (data) {
-  if (data.title.indexOf('Wanted') > 0 || data.title.indexOf('basement') > 0 || data.title.indexOf('Basement') > 0) {
+  if (data.title.indexOf('Wanted') > 0 || data.title.indexOf('basement') > 0 || data.title.indexOf('Basement') > 0 || data.title.indexOf('bsmt') > 0 || data.title.indexOf('Lower Level') > 0 || data.title.indexOf('lower level') > 0) {
     console.log('basement');
   } else {
-    var title = '<p class="title"><a href="' + data.link + '" target="_blank">' + data.title + '</a></p>',
+    var title = '<p class="title">' + data.title + '</p>',
         gps = '<p>' + data.location + '</p>',
         bills = '<p class="price">' + data.price + '</p>';
         if (!data.image) {
-          var pic = '<img src="images/noimg.jpg">';
+          var pic = '<div class="image" style="background-image: url(images/noimg.jpg)"></div>';
         } else {
-          pic = '<img src="' + data.image + '">';
+          pic = '<div class="image" style="background-image: url(' + data.image + ')"></div>';
         }
-        var build = '<article><div class="image">' + pic + '</div><div class="content">' + title + gps + bills + '</div></article>';
+    var build = '<a href="' + data.link + '" target="_blank"><article>' + pic + '<div class="content"><header><div class="priceList">' + bills + "</div>" + gps + '</header><div class="info">'  + title + '</div></div></article></a>';
 
     $('section.results').append(build);
     pad.preload.hide();
